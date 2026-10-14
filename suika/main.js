@@ -1,8 +1,8 @@
 var Engine = Matter.Engine, 
-Render = Matter.Render, 
-Runner = Matter.Runner,
-Bodies = Matter.Bodies,
-World = Matter.World;
+    Render = Matter.Render, 
+    Runner = Matter.Runner,
+    Bodies = Matter.Bodies,
+    World = Matter.World;
 
 const engine = Engine.create();
 
