@@ -13,6 +13,21 @@ const leftwall = Bodies.rectangle(15, 395, 30, 790,{
     render: {fillStyle: '#E6B143'}
 });
 
+const rightwall = Bodies.rectangle(605, 395, 30, 790,{
+    isStatic : true,
+    render: {fillStyle: '#E6B143'}
+});
+
+const ground = Bodies.rectangle(310, 820, 620, 60,{
+    isStatic : true,
+    render: {fillStyle: '#E6B143'}
+});
+
+const topLine = Bodies.rectangle(310, 150, 620, 2,{
+    isStatic : true,
+    render: {fillStyle: '#E6B143'}
+});
+
 const render = Render.create({
     engine,
     element: document.body, //html문서 body 생성
@@ -25,6 +40,8 @@ const render = Render.create({
 })
 
 World.add(world, [leftwall])
+World.add(world, [rightwall])
+World.add(world, [ground, topLine])
 
 Render.run(render)
 Runner.run(engine)
