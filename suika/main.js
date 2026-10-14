@@ -1,13 +1,13 @@
-var engine = Matter.engine, 
-Rander = Matter.Rander, 
-runner = Matter.runner,
-bodies = Matter.bodies,
-world = Matter.world;
+var Engine = Matter.Engine, 
+Render = Matter.Render, 
+Runner = Matter.Runner,
+Bodies = Matter.Bodies,
+World = Matter.World;
 
-const Engine = engine.create();
+const engine = Engine.create();
 
-const render = Rander.create({
-    Engine,
+const render = Render.create({
+    engine,
     element: document.body, //html문서 body 생성
     options: {
         wireframes: false, //선으로만 구현 할것인지
@@ -17,5 +17,5 @@ const render = Rander.create({
     }
 })
 
-Rander.run(render)
-runner.run(Engine)
+Render.run(render)
+Runner.run(engine)
