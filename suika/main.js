@@ -6,6 +6,13 @@ var Engine = Matter.Engine,
 
 const engine = Engine.create();
 
+const world = engine.world;
+
+const leftwall = Bodies.rectangle(15, 395, 30, 790,{
+    isStatic : true,
+    render: {fillStyle: '#E6B143'}
+});
+
 const render = Render.create({
     engine,
     element: document.body, //html문서 body 생성
@@ -16,6 +23,8 @@ const render = Render.create({
         height: 850,
     }
 })
+
+World.add(world, [leftwall])
 
 Render.run(render)
 Runner.run(engine)
